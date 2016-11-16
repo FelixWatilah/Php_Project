@@ -10,6 +10,8 @@
 
     include "phpconfig/db_config.php";
 
+    mysqli_select_db($conn,'student');
+
     $sql = "DELETE FROM new_student WHERE email = '$email'";
     $result = mysqli_query($conn,$sql);
 

@@ -24,6 +24,8 @@ if (isset($_POST['update'])) {
 
     include "phpconfig/db_config.php";
 
+    mysqli_select_db($conn,'student');
+
     $sql = "UPDATE new_student 
             SET full_name='$full_name', email='$email', phone='$phone', academic_year='$academic_year', dob='$dob', gender='$gender', 
             student_type='$student_type',county='$county', town='$town', address='$address', category='$category', tribe='$tribe'

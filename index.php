@@ -184,13 +184,13 @@ if(isset($_SESSION['email'])){
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="passcode">Passcode:</label>
                                     <div class="col-md-9">
-                                        <input class="form-control" type="password" id="passcode" name="passcode" placeholder="***************">
+                                        <input class="form-control" type="password" id="passcode" name="passcode" placeholder="********">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="c_passcode">Confirm Passcode:</label>
                                     <div class="col-md-9">
-                                        <input class="form-control" type="password" id="c_passcode" name="passcode" placeholder="***************">
+                                        <input class="form-control" type="password" id="c_passcode" name="passcode" placeholder="********">
                                     </div>
                                 </div>
                             </div><!-- end col-lg-6 -->

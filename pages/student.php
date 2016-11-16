@@ -196,7 +196,7 @@ if(!isset($_SESSION['email'])){
                             </div><!-- end col-md-6 -->
                         </div><!-- end row -->
                         <div class="form-group text-center" id="buttons">
-                            <input role="button" type="submit" class="btn btn-success fbtn" id="save" value="Save">
+                            <input role="button" type="submit" class="btn btn-success fbtn" name="save" id="save" value="Save">
                             <input role="button" type="button" class="btn btn-danger fbtn" id="exit" value="Exit">
                         </div><!-- end buttons -->
                     </form><!-- end form-horizontal -->

@@ -46,6 +46,8 @@ if(!isset($_SESSION['email'])){
 
                 include "phpconfig/db_config.php";
 
+                mysqli_select_db($conn,'student');
+
                 $sql = "SELECT * FROM new_student WHERE adm_no = '$search'";
                 $result = mysqli_query($conn,$sql);
 

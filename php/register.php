@@ -22,7 +22,25 @@
 
      include "phpconfig/db_config.php";
 
-     $sql= "INSERT INTO register (name,email,id_no,gender,job_no,category,work_type,phone,county,department,passcode) 
+     $db = "CREATE DATABASE IF NOT EXISTS student";
+     mysqli_select_db($conn,'student');
+
+     $tb = "CREATE TABLE IF NOT EXISTS register (
+            name VARCHAR(25),
+            email VARCHAR (50),
+            id_no INT(10),
+            gender VARCHAR(25),
+            job_no VARCHAR (25),
+            category VARCHAR (25),
+            work_type VARCHAR (25),
+            phone INT (25),
+            county VARCHAR (25),
+            department VARCHAR (25),
+            passcode VARCHAR (25))";
+
+     $tb_sql = mysqli_query($conn,$tb);
+
+     $sql = "INSERT INTO register (name,email,id_no,gender,job_no,category,work_type,phone,county,department,passcode) 
             VALUES('$name','$email','$id_no','$gender','$job_no','$category','$work_type','$phone','$county','$department','$passcode')";
      $result = mysqli_query($conn,$sql);
 

@@ -13,8 +13,27 @@ if (isset($_POST['username'],$_POST['password'])){
 
     include "phpconfig/db_config.php";
 
+    $db = "CREATE DATABASE IF NOT EXISTS student";
+    mysqli_select_db($conn,'student');
+
+    $tb = "CREATE TABLE IF NOT EXISTS register (
+            name VARCHAR(25),
+            email VARCHAR (50),
+            id_no INT(10),
+            gender VARCHAR(25),
+            job_no VARCHAR (25),
+            category VARCHAR (25),
+            work_type VARCHAR (25),
+            phone INT (25),
+            county VARCHAR (25),
+            department VARCHAR (25),
+            passcode VARCHAR (25))";
+
+    $tb_sql = mysqli_query($conn,$tb);
+
     $sql = "SELECT email,passcode FROM register WHERE email = '$username'";
     $result = mysqli_query($conn,$sql);
+
     $row = mysqli_fetch_assoc($result);
 
     if($row > 0){

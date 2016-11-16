@@ -1,4 +1,9 @@
-
+<?php
+session_start();
+if(!isset($_SESSION['email'])){
+    header("Location:../index.php");
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -81,17 +86,21 @@
                 <div class="col-md-6 col-sm-6">
                     <section>
                         <!--==form-groups==-->
+
+
                         <div class="form-group">
                             <label for="profile_photo" class="control-label col-md-3 col-sm-3">Profile Photo:</label>
                             <div class="col-md-5 col-sm-5">
-                                <input type="file" class="form-control">
-                                <input type="button" class="btn btn-primary" id="upload" value="Upload">
+                                <input type="file" name="profile_pic">
+                                <input type="button" class="btn btn-primary" name="upload_profile_pic" id="upload" value="Upload">
                             </div>
                             <div class="col-md-2 col-sm-2">
                                 <img src="../img/deep-love-quotes-300x300.jpg" class="img-circle">
                             </div>
                             <div class="col-md-2 col-sm-2"></div>
-                        </div>
+                        </div><!-- profile pic -->
+
+
                         <div class="form-group">
                             <label for="county" class="control-label col-md-3 col-sm-3">County:</label>
                             <div class="col-md-9 col-sm-9">
@@ -133,7 +142,7 @@
                 </div><!-- end col-md-6 -->
             </div><!-- end row -->
             <div class="form-group text-center" id="buttons">
-                <input role="button" type="submit" class="btn btn-success fbtn" id="save" value="Save">
+                <input role="button" type="submit" class="btn btn-success fbtn" name="save" id="save" value="Save">
                 <input role="button" type="button" class="btn btn-danger fbtn" id="exit" value="Exit">
             </div><!-- end buttons -->
         </form><!-- end form-horizontal -->

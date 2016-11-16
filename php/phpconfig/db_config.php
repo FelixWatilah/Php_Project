@@ -9,7 +9,6 @@
 $SERVER = "localhost";
 $USER = "root";
 $PASS = "";
-$DB = "student";
 
-$conn= mysqli_connect($SERVER,$USER,$PASS,$DB);
+$conn= mysqli_connect($SERVER,$USER,$PASS);
 ?>

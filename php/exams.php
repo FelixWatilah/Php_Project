@@ -6,6 +6,9 @@
  * Time: 7:15 PM
  */
 include "phpconfig/db_config.php";
+
+mysqli_select_db($conn,'student');
+
 $sql = "SELECT * FROM new_student ORDER BY full_name";
 $result = mysqli_query($conn,$sql);
 

@@ -11,6 +11,8 @@ if (isset($_POST['recover_btn'])){
 
     include "phpconfig/db_config.php";
 
+    mysqli_select_db($conn,'student');
+
     $sql = "SELECT passcode FROM register WHERE email = '$username'";
     $result = mysqli_query($conn,$sql);
 
